@@ -17,11 +17,25 @@ body {
   flex-direction: column-reverse; }
 
 .content {
-  padding: 20px; }
+  padding: 20px 40px; }
   .content h1 {
     color: #2ebb98;
     text-align: center;
-    margin: 0; }
+    margin-bottom: 25px; }
+  .content .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .content .profile-wrapper .profile-img {
+      margin-bottom: 25px; }
+      .content .profile-wrapper .profile-img img {
+        width: 250px;
+        -webkit-border-radius: 9999px;
+        -moz-border-radius: 9999px;
+        -ms-border-radius: 9999px;
+        border-radius: 9999px; }
+    .content .profile-wrapper .profile-info {
+      color: #2ebb98; }
 
 /*-------------------*/
 /*--- MENU ---*/

@@ -40,11 +40,26 @@ body {
   flex-direction: column-reverse;
 }
 .content{
-  padding: 20px;
+  padding: 20px 40px;
   h1{
     color: $primary-color;
     text-align: center;
-    margin: 0;
+    margin-bottom: 25px; 
+  }
+  .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .profile-img{
+      margin-bottom: 25px;
+      img{ 
+        width: 250px;
+        @include border-radius(9999px);
+      }
+    }
+    .profile-info{
+      color: $primary-color;
+    }
   }
 }
 
@@ -59,15 +74,9 @@ body {
 
 .toggleVisible{
   display: block;
-  // overflow: hidden;
-  // max-height: 1000px;
-  // transition: max-height .3s ease-out;
 }
 .toggleHidden{
-  display: none;  
-  // overflow: hidden;
-  // max-height: 0;
-  // transition: max-height .3s ease-out;
+  display: none;
 }
 
 .panel{
