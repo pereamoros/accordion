@@ -1,0 +1,91 @@
+/*--- VARIABLES ---*/
+/*--- TYPOGRAPHY ---*/
+/*--- COMPONENTS ---*/
+/*-------------------*/
+/*--- MIXIN ---*/
+/*-------------------*/
+/*--- LAYOUT ---*/
+body {
+  font: 100% sans-serif;
+  background: #efefef;
+  color: #ffffff;
+  margin: 0; }
+
+.main-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse; }
+
+.content {
+  padding: 20px; }
+  .content h1 {
+    color: #2ebb98;
+    text-align: center;
+    margin: 0; }
+
+/*-------------------*/
+/*--- MENU ---*/
+.nav-wrapper {
+  background: #25967a;
+  margin-bottom: 25px; }
+
+.toggleVisible {
+  display: block; }
+
+.toggleHidden {
+  display: none; }
+
+.panel, .nav-main, dl dt, dl .nav-item, dl dd div {
+  padding: 20px;
+  border-bottom: 1px solid #25967a; }
+
+.nav-main {
+  cursor: pointer; }
+
+dl {
+  margin: 0; }
+  dl .nav-item {
+    cursor: pointer;
+    background: #2ebb98; }
+    dl .nav-item:hover {
+      background: #37e0b6; }
+  dl dd {
+    margin: 0; }
+    dl dd div {
+      background: #ffffff;
+      color: #2ebb98; }
+    dl dd p {
+      margin: 0; }
+
+.toggleDisplay {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  text-align: center;
+  background: #ffffff;
+  color: #25967a;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  -ms-border-radius: 9999px;
+  border-radius: 9999px; }
+
+/*-------------------*/
+/*--- MEDIA QUERY ---*/
+@media (min-width: 768px) {
+  .main-wrapper {
+    flex-direction: initial;
+    justify-content: space-between; }
+
+  .content {
+    flex: 1; }
+
+  .nav-wrapper {
+    width: 250px;
+    height: 100vh;
+    margin-bottom: 0; }
+
+  .nav-main {
+    cursor: initial; } }
+
+/*# sourceMappingURL=main.css.map */

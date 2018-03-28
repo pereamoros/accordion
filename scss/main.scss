@@ -1,0 +1,143 @@
+/*--- VARIABLES ---*/
+
+  /*--- TYPOGRAPHY ---*/
+  $main-font: sans-serif;
+  $text-color: #ffffff;
+  $title-color: #333;
+
+  /*--- COMPONENTS ---*/
+  $bg-color: #efefef;
+  $primary-color: #2ebb98;
+  $secondary-color: #ffffff;
+  $third-color: $primary-color * 0.8;
+
+/*-------------------*/
+
+
+/*--- MIXIN ---*/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/*-------------------*/
+
+/*--- LAYOUT ---*/
+
+body {
+  font: 100% $main-font;
+  background: $bg-color;
+  color: $text-color;
+  margin: 0;
+}
+
+.main-wrapper{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.content{
+  padding: 20px;
+  h1{
+    color: $primary-color;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+/*-------------------*/
+
+/*--- MENU ---*/
+
+.nav-wrapper{
+  background: $third-color;
+  margin-bottom: 25px;
+}
+
+.toggleVisible{
+  display: block;
+  // overflow: hidden;
+  // max-height: 1000px;
+  // transition: max-height .3s ease-out;
+}
+.toggleHidden{
+  display: none;  
+  // overflow: hidden;
+  // max-height: 0;
+  // transition: max-height .3s ease-out;
+}
+
+.panel{
+  padding: 20px;
+  border-bottom: 1px solid $third-color;
+}
+
+.nav-main{
+  @extend .panel ;
+  cursor: pointer;
+}
+
+dl{
+  margin: 0;
+
+  dt{
+    @extend .panel ;
+  }
+  
+  .nav-item{
+    @extend .panel ;
+    cursor: pointer;
+    background: $primary-color;
+    &:hover{
+      background: $primary-color * 1.2;
+    }
+  }
+  
+  dd{
+    margin: 0;
+    div{
+      @extend .panel ;
+      background: $secondary-color;
+      color: $primary-color;
+    }
+    p{
+      margin: 0;
+    }
+  }
+}
+
+.toggleDisplay{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  text-align: center;
+  background: $secondary-color;
+  color: $third-color;
+  @include border-radius(9999px);
+}
+
+/*-------------------*/
+
+/*--- MEDIA QUERY ---*/
+
+@media (min-width: 768px) {
+  .main-wrapper{
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+  .content{
+    flex: 1;
+  }
+  .nav-wrapper{
+    width: 250px;
+    height: 100vh;
+    margin-bottom: 0;
+  }
+  .nav-main{
+    cursor: initial;
+  }
+}
